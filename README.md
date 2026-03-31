@@ -22,13 +22,15 @@ The analysis uses motion and transdermal alcohol concentration (TAC) data collec
 
 ## Dataset
 
-This project uses an open-source dataset from Killian et al., containing:
+This project uses an open-source dataset introduced by **Killian, Passino, Nandi, Madden, and Clapp** in *Learning to Detect Heavy Drinking Episodes Using Smartphone Accelerometer Data*. The dataset combines physiological alcohol measurements with smartphone motion sensing collected during a real-world college drinking event.
 
-- **TAC readings** from ankle sensors used to define intoxication labels
-- **Smartphone accelerometer recordings** with tri-axial motion data
-- Data collected during a real-world college drinking event
+It contains:
 
-An observation is labeled **intoxicated** when:
+- **Transdermal alcohol concentration (TAC) readings** from ankle sensors, used to derive intoxication labels
+- **Smartphone accelerometer data** capturing tri-axial motion patterns
+- **Field-collected observations** recorded during a naturalistic campus pub-crawl setting
+
+Following the original study, an observation is labeled as **intoxicated** when:
 
 - **TAC > 0.08 g/dL**
 
@@ -36,7 +38,7 @@ An observation is labeled **intoxicated** when:
 
 ## Preprocessing
 
-The raw data required substantial restructuring before modeling.
+The raw dataset was not immediately suitable for modeling and required substantial cleaning, alignment, and restructuring before analysis. Our preprocessing pipeline was partly inspired by the implementation available in the [detect_heavy_drinking](https://github.com/lisachua/detect_heavy_drinking) repository, while extending it to address irregular sampling, label propagation, and feature engineering more systematically.
 
 ### 1. Irregular sampling correction
 Although the paper reports accelerometer data at **40 Hz**, timestamp inspection revealed highly irregular sampling, including long gaps. To address this, the motion signal was:
