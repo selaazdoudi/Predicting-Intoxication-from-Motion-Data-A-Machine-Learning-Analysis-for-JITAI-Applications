@@ -2,7 +2,7 @@
 
 A machine learning project that predicts alcohol intoxication from smartphone accelerometer data to support **Just-in-Time Adaptive Interventions (JITAIs)**. Using motion-derived gait features, the project compares linear models, ensemble methods, and neural networks, showing that **tree-based models perform best**, reaching about **86.5% accuracy**.
 
-Authors : Salma El Aazdoudi (Ecole Polytechnique-ENSAE) & Maria Micaela Linares (Ecole Polytechnique-ENSAE)
+Authors : Salma El Aazdoudi (Ecole Polytechnique-ENSAE) & Maria Micaela Linares (Ecole Polytechnique-ENSAE). This project received an A+.
 
 ---
 
